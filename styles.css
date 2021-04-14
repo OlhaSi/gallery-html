@@ -88,12 +88,14 @@ body {
 .item-text-wrapper .subtitle {
     transition: 1s;
     color: transparent;
+    /* to make a frame around the text */
     /* border: 1px solid transparent;*/
 }
 
 .item-text-wrapper:hover .subtitle {
     font-weight: 500;
     color: lightgrey;
+    /* to make a frame around the text */
     /* opacity: 0.7;
      border: 1px solid transparent;
      background-color: #ffffff;*/
