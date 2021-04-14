@@ -1,0 +1,127 @@
+/* Main styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Nav styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.left-side {
+    display: flex;
+}
+
+.navbar .left-side > div {
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a:hover {
+    color: black;
+    transition: color 0.5s;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black;
+}
+
+/* Portfolio styles */
+.items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.single-item-wrapper {
+    position: relative;
+}
+
+.item-img-background {
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
+.item-text-wrapper .subtitle {
+    transition: 1s;
+    color: transparent;
+    /* border: 1px solid transparent;*/
+}
+
+.item-text-wrapper:hover .subtitle {
+    font-weight: 500;
+    color: lightgrey;
+    /* opacity: 0.7;
+     border: 1px solid transparent;
+     background-color: #ffffff;*/
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/* About page */
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*.image-wrapper {
+    padding-left: 20px;
+}*/
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.text-wrapper {
+    padding: 40px;
+}
+
+.text-wrapper h1 {
+    color: rosybrown;
+}
