@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <title>Gallery</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="container">
     <div class="navbar">
         <div class="left-side">
             <div class="hamburger" onclick="toggleClass()">
-                <i class="fa fa-bars"></i>
+                <i class="material-icons">menu</i>
+                <i class="material-icons hidden">close</i>
             </div>
 
-            <div class="nav-link-wrapper active-nav-link">
-                <a href="index.html">Home</a>
+            <div class="links">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
             </div>
 
-            <div class="nav-link-wrapper">
-                <a href="about.html">About</a>
-            </div>
         </div>
 
         <div class="right-side">
             <div class="brand">
                 <div>OLHA SIRKO</div>
             </div>
-
         </div>
     </div>
 
@@ -184,6 +188,8 @@
 </body>
 
 <script>
+
+    // hover on single image to get and remove dark background
     const items = document.querySelectorAll('.single-item-wrapper');
 
     items.forEach(item => {
@@ -196,11 +202,14 @@
         })
     })
 
+    // click in burger and get or hide the menu
     function toggleClass() {
-        let menu = document.querySelectorAll('.nav-link-wrapper');
-        console.log('----T_E_S_T----', menu)
-        menu.forEach(function (el){
-            el.classList.toggle("toggleCls");
+        let menu = document.querySelector('.links');
+        menu.classList.toggle("toggleCls");
+
+        let hamburgerIcons = document.querySelectorAll('.hamburger > i');
+        hamburgerIcons.forEach(function (el) {
+            el.classList.toggle('hidden');
         })
 
     }
